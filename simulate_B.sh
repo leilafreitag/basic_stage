@@ -15,18 +15,20 @@ evtGenFile="$HOME/FCC-config/FCCee/Generator/EvtGen/Bs2JpsiPhi.dec"
 evtGenDecay="531 B_s0 1"
 
 cards=(
-	"_standard"
-        "_R1.3"
-        "_R1.3_w30"
-        "_R1.3_w50"
-        "_R1.3_w100"
-        "_R1.3_w30_DSK"
-        "_R1.3_w50_DSK"
-        "_R1.3_w100_DSK"
+#	"_standard"
+#        "_R1.3"
+#        "_R1.3_w30"
+#        "_R1.3_w50"
+#        "_R1.3_w100"
+#        "_R1.3_w30_DSK"
+#        "_R1.3_w50_DSK"
+#        "_R1.3_w100_DSK"
       )
 
-cards=("_R1.3_w100" "_R1.3_w100_DSK" "_R1.3_w30_DSK")
-
+#cards=("_R1.3_w100" "_R1.3_w100_DSK" "_R1.3_w30_DSK")
+#cards=("_FullSilicon")
+cards=("_R1.3_L1_w30")
+#cards=("_standard")
 
 for card in "${cards[@]}"; do
 

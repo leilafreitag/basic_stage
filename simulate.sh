@@ -22,11 +22,14 @@ cards=(
         "_R1.3_w30_DSK"
         "_R1.3_w50_DSK"
         "_R1.3_w100_DSK"
+        "_R1.3_L1_w30"
       )
 
+#cards=("_R1.3_L1_w30")
+#cards=("_R1.3_w30")
 
 for card in "${cards[@]}"; do
-    # Pythia
+   # Pythia
     nohup DelphesPythia8_EDM4HEP $HOME/FCC-config/FCCee/Delphes/card_IDEA${card}.tcl $edm4hep_card $process_card ${outDir}/${process_name}${card}.root > ${process_name}${card}.log &
    # nohup DelphesPythia8_EDM4HEP card_IDEA${card}.tcl $edm4hep_card $process_card ${outDir}/${process_name}${card}.root > ${process_name}${card}.log &
    # DelphesPythia8_EDM4HEP card_IDEA${card}.tcl $edm4hep_card $process_card ${outDir}/${process_name}${card}.root

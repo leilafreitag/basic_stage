@@ -19,9 +19,9 @@ momenta=("1000" "1000" "1000" "1000" "1000" "1000" "1000" "1000" "1000") #MeV un
 momenta_GeV=("1" "1" "1" "1" "1" "1" "1" "1" "1") #remember to change this to match the momentum entries (in MeV)
 angles=("10" "20" "30" "40" "50" "60" "70" "80" "89") #degrees
 
-momenta=("100000" "100000")
-momenta_GeV=("100" "100")
-angles=("8.5" "9")
+#momenta=("100000" "100000")
+#momenta_GeV=("100" "100")
+#angles=("8.5" "9")
 
 #input of the particle gun needs tranverse momentum so we calculate this in the script calc_pt.py which takes as input a list of momenta and corresp theta to calc list of pt
 list_of_pt=(`python calc_pt.py -wantMom yes -p ${momenta[@]} -theta ${angles[@]} | tr -d '[],'`) #the tr command deletes the brackets and commas to make the returned python list have the format of a bash array
@@ -37,6 +37,9 @@ cards=(
         "_R1.3_w50_DSK"
         "_R1.3_w100_DSK"
       )
+
+cards=("_standard")
+
 #cards=("_R1.3_w30_DSK" "_R1.3_w50_DSK" "_R1.3_w100_DSK")
 #cards=("_R1.3_w50_DSK" "_R1.3_w100_DSK")
 
